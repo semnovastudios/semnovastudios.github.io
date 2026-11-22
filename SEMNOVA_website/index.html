@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SEMNOVA Studios | Bold digital designs, PNGs & printables</title>
+<meta name="description" content="SEMNOVA Studios: epic PNG designs for tees and merch, wall art printables and digital planners. Shop on Etsy and TeePublic, and follow along on Instagram, Facebook, Pinterest and X.">
+<meta name="theme-color" content="#1C1411">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SEMNOVA Studios">
+<meta property="og:description" content="Epic and bold digital designs: tee PNGs, wall art and planners.">
+<meta property="og:image" content="assets/share-card.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --night:#1C1411; --night-2:#251B17; --night-3:#2F231E;
+    --cream:#F7F0E6; --gold:#E3B565; --ember:#D9701A;
+    --parchment:#F4EDE3; --smoke:#7A6E66; --smoke-2:#A89C93;
+    --radius:16px; --max:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:Poppins,system-ui,sans-serif;background:var(--night);color:var(--cream);
+    line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+  /* ambient glow */
+  body::before{
+    content:"";position:fixed;inset:-20% -20% auto -20%;height:80vh;pointer-events:none;z-index:0;
+    background:radial-gradient(ellipse at 50% 30%,rgba(227,181,101,.16),transparent 60%),
+               radial-gradient(ellipse at 80% 10%,rgba(217,112,26,.10),transparent 55%);
+  }
+  main,footer{position:relative;z-index:1}
+
+  /* HERO */
+  .hero{text-align:center;padding:40px 0 18px}
+  .logo{
+    width:min(280px,66vw);height:auto;aspect-ratio:1;object-fit:cover;margin:0 auto;mix-blend-mode:screen;
+    -webkit-mask-image:radial-gradient(circle at 50% 50%,#000 52%,transparent 71%);
+            mask-image:radial-gradient(circle at 50% 50%,#000 52%,transparent 71%);
+    animation:float 7s ease-in-out infinite;
+  }
+  @keyframes float{50%{transform:translateY(-6px)}}
+  .tagline{font-family:Lora,serif;font-style:italic;color:var(--gold);font-size:clamp(18px,2.6vw,22px);margin-top:4px}
+  .intro{color:var(--smoke-2);max-width:520px;margin:10px auto 0;font-size:15px}
+
+  /* LINKS */
+  .links{max-width:520px;margin:28px auto 0;display:grid;gap:12px}
+  .btn{
+    display:flex;align-items:center;gap:14px;padding:15px 18px;border-radius:14px;
+    background:var(--night-2);border:1px solid rgba(227,181,101,.22);
+    transition:transform .18s ease,border-color .18s ease,background .18s ease;
+  }
+  .btn:hover,.btn:focus-visible{transform:translateY(-2px);border-color:var(--gold);background:var(--night-3);outline:none}
+  .btn svg{width:24px;height:24px;flex:none;fill:currentColor}
+  .btn .label{font-weight:600;font-size:15.5px}
+  .btn .sub{display:block;font-weight:400;font-size:12.5px;color:var(--smoke-2)}
+  .btn .arrow{margin-left:auto;color:var(--gold);font-size:18px}
+  .btn.primary{
+    background:linear-gradient(135deg,#F0C878,var(--gold) 45%,#C98F3C);color:var(--night);border:none;
+    box-shadow:0 8px 30px rgba(227,181,101,.28);
+  }
+  .btn.primary .sub{color:rgba(28,20,17,.72)}
+  .btn.primary .arrow{color:var(--night)}
+  .socials{display:flex;justify-content:center;gap:12px;margin-top:20px;flex-wrap:wrap}
+  .social{
+    width:48px;height:48px;border-radius:50%;display:grid;place-items:center;
+    background:var(--night-2);border:1px solid rgba(227,181,101,.22);color:var(--gold);transition:.18s;
+  }
+  .social:hover,.social:focus-visible{background:var(--gold);color:var(--night);outline:none;transform:translateY(-2px)}
+  .social svg{width:21px;height:21px;fill:currentColor}
+
+  /* OFFER */
+  .offer{
+    margin:36px auto 0;max-width:760px;border-radius:var(--radius);padding:18px 22px;
+    display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:space-between;
+    background:linear-gradient(120deg,rgba(217,112,26,.22),rgba(227,181,101,.12));
+    border:1px solid rgba(217,112,26,.45);
+  }
+  .offer b{color:var(--gold)}
+  .offer .pill{background:var(--ember);color:var(--cream);font-weight:600;font-size:13px;padding:9px 16px;border-radius:999px;white-space:nowrap}
+
+  /* SECTIONS */
+  section{padding:56px 0 0}
+  .head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+  h2{font-weight:700;font-size:clamp(22px,3.4vw,30px);letter-spacing:.2px}
+  h2 em{font-family:Lora,serif;font-weight:500;color:var(--gold)}
+  .more{color:var(--gold);font-size:14px;font-weight:500}
+  .more:hover{text-decoration:underline}
+
+  /* REELS */
+  .reels{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(200px,230px);gap:14px;overflow-x:auto;
+    scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin;scrollbar-color:var(--smoke) transparent}
+  .reel{
+    position:relative;aspect-ratio:9/16;border-radius:var(--radius);overflow:hidden;scroll-snap-align:start;
+    background:var(--night-2);border:1px solid rgba(227,181,101,.18);
+  }
+  .reel video,.reel .kb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .reel .kb{animation:kb 14s ease-in-out infinite alternate}
+  .reel:nth-child(odd) .kb{animation-direction:alternate-reverse}
+  @keyframes kb{from{transform:scale(1.02) translate(0,0)}to{transform:scale(1.22) translate(-4%,-3%)}}
+  .reel::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(28,20,17,.92) 0%,rgba(28,20,17,0) 45%);pointer-events:none}
+  .reel .cap{position:absolute;left:14px;right:14px;bottom:14px;z-index:2}
+  .reel .cap b{display:block;font-size:15px}
+  .reel .cap span{font-size:12.5px;color:var(--gold)}
+  .reel .sound{
+    position:absolute;top:12px;right:12px;z-index:3;width:38px;height:38px;border-radius:50%;border:none;cursor:pointer;
+    background:rgba(28,20,17,.65);color:var(--cream);display:grid;place-items:center;backdrop-filter:blur(4px)
+  }
+  .reel .sound svg{width:18px;height:18px;fill:currentColor}
+  .reel .badge{position:absolute;top:12px;left:12px;z-index:3;font-size:11px;font-weight:600;letter-spacing:.6px;
+    background:rgba(28,20,17,.65);padding:5px 9px;border-radius:999px;color:var(--gold);backdrop-filter:blur(4px)}
+
+  /* PRODUCTS */
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .chip{
+    font:500 13.5px Poppins,sans-serif;padding:8px 15px;border-radius:999px;cursor:pointer;
+    background:transparent;color:var(--cream);border:1px solid rgba(227,181,101,.3);transition:.15s
+  }
+  .chip[aria-pressed="true"],.chip:hover{background:var(--gold);color:var(--night);border-color:var(--gold)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+  .card{
+    background:var(--night-2);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(227,181,101,.14);
+    transition:transform .2s ease,border-color .2s ease;display:flex;flex-direction:column
+  }
+  .card:hover,.card:focus-visible{transform:translateY(-4px);border-color:var(--gold);outline:none}
+  .card img,.reel img{color:transparent}
+  .card .img{aspect-ratio:4/3;overflow:hidden;background:var(--night-3)}
+  .card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .card:hover img{transform:scale(1.05)}
+  .card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px;flex:1}
+  .card .cat{font-size:11.5px;letter-spacing:.8px;text-transform:uppercase;color:var(--ember);font-weight:600}
+  .card h3{font-size:16px;font-weight:600;line-height:1.3}
+  .card p{font-size:13px;color:var(--smoke-2)}
+  .card .go{margin-top:auto;padding-top:8px;font-size:13.5px;color:var(--gold);font-weight:500}
+  .card[hidden]{display:none}
+
+  /* ABOUT */
+  .about{
+    margin-top:56px;border-radius:var(--radius);padding:32px 26px;text-align:center;
+    background:var(--parchment);color:var(--night);
+  }
+  .about h2{color:var(--night)}
+  .about h2 em{color:var(--ember)}
+  .about p{max-width:620px;margin:10px auto 0;color:#4a3d36}
+  .about .btn.primary{display:inline-flex;margin-top:18px;max-width:none}
+
+  footer{text-align:center;color:var(--smoke);font-size:12.5px;padding:40px 20px 48px}
+  footer a{color:var(--smoke-2)}
+  footer a:hover{color:var(--gold)}
+  footer .fl{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+  }
+  @media (max-width:520px){
+    .hero{padding-top:28px}
+    .grid{grid-template-columns:1fr 1fr;gap:12px}
+    .card .body{padding:10px 12px 12px}
+    .card h3{font-size:14px}
+    .card p{display:none}
+    .reels{grid-auto-columns:62vw}
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <img class="logo" src="assets/logo.jpg" alt="SEMNOVA Studios logo" width="640" height="640">
+    <p class="tagline">Epic designs, made to shine.</p>
+    <p class="intro">Bold PNG designs for tees and merch, wall art printables and digital planners. Instant download, ready to print, press or display.</p>
+
+    <nav class="links" aria-label="Shop links">
+      <a class="btn primary" href="https://semnova.etsy.com" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7V6a5 5 0 0 1 10 0v1h3l-1 14H5L4 7h3Zm2 0h6V6a3 3 0 0 0-6 0v1Z"/></svg>
+        <span><span class="label">Shop on Etsy</span><span class="sub">PNGs, wall art & planners, instant download</span></span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="btn" href="https://www.teepublic.com/user/semnova-studios" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3 21 6.2l-2.2 4-2.3-1.1V21h-9V9.1L5.2 10.2 3 6.2 7.5 3h2.1a2.4 2.4 0 0 0 4.8 0h2.1Z"/></svg>
+        <span><span class="label">Shop tees & merch</span><span class="sub">Our designs printed for you on TeePublic</span></span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="btn" href="https://www.instagram.com/semnova.studios/reels/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.13 15.58 2.12 15.2 2.12 12s.01-3.58.07-4.85C2.34 3.92 3.86 2.38 7.11 2.27 8.38 2.21 8.76 2.2 12 2.2Zm0 4.86a4.94 4.94 0 1 0 0 9.88 4.94 4.94 0 0 0 0-9.88Zm0 8.15a3.2 3.2 0 1 1 0-6.42 3.2 3.2 0 0 1 0 6.42Zm5.14-9.5a1.15 1.15 0 1 0 0 2.3 1.15 1.15 0 0 0 0-2.3Z"/></svg>
+        <span><span class="label">Watch our reels</span><span class="sub">New drops and behind the design on Instagram</span></span>
+        <span class="arrow">→</span>
+      </a>
+    </nav>
+
+    <div class="socials" aria-label="Follow SEMNOVA Studios">
+      <a class="social" href="https://www.instagram.com/semnova.studios/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.13 15.58 2.12 15.2 2.12 12s.01-3.58.07-4.85C2.34 3.92 3.86 2.38 7.11 2.27 8.38 2.21 8.76 2.2 12 2.2Zm0 4.86a4.94 4.94 0 1 0 0 9.88 4.94 4.94 0 0 0 0-9.88Zm0 8.15a3.2 3.2 0 1 1 0-6.42 3.2 3.2 0 0 1 0 6.42Zm5.14-9.5a1.15 1.15 0 1 0 0 2.3 1.15 1.15 0 0 0 0-2.3Z"/></svg></a>
+      <a class="social" href="https://www.facebook.com/profile.php?id=1391584774045946" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.87.24-1.46 1.49-1.46h1.6V5.16a21 21 0 0 0-2.33-.12c-2.3 0-3.88 1.4-3.88 3.98v2.2H7.8v3h2.6v7.7A10 10 0 1 1 13.5 21.9Z"/></svg></a>
+      <a class="social" href="https://www.pinterest.com/semnovastudios/" target="_blank" rel="noopener" aria-label="Pinterest">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.64 19.31c-.09-.79-.17-2 .03-2.86l1.17-4.97s-.3-.6-.3-1.48c0-1.39.81-2.43 1.81-2.43.86 0 1.27.64 1.27 1.41 0 .86-.55 2.15-.83 3.34-.24 1 .5 1.81 1.48 1.81 1.78 0 3.15-1.88 3.15-4.58 0-2.4-1.72-4.07-4.18-4.07-2.85 0-4.52 2.13-4.52 4.34 0 .86.33 1.78.74 2.28.08.1.09.19.07.29l-.28 1.13c-.04.18-.14.22-.33.13-1.25-.58-2.03-2.4-2.03-3.87 0-3.15 2.29-6.04 6.6-6.04 3.46 0 6.15 2.47 6.15 5.76 0 3.44-2.17 6.2-5.18 6.2-1.01 0-1.96-.52-2.29-1.14l-.62 2.38c-.23.87-.84 1.96-1.25 2.62A10 10 0 1 0 12 2Z"/></svg></a>
+      <a class="social" href="https://x.com/SEMNOVAStudios" target="_blank" rel="noopener" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.32l4.37 5.78L17.75 3Zm-1.08 16.17h1.7L7.4 4.73H5.58l11.09 14.44Z"/></svg></a>
+      <a class="social" href="https://semnovastudios.tumblr.com" target="_blank" rel="noopener" aria-label="Tumblr">
+        <svg viewBox="0 0 24 24"><path d="M14.56 21c-2.9 0-5.06-1.49-5.06-5.06V10.2H6.86V7.1A5.8 5.8 0 0 0 11.1 2h3.02v4.9h3.5v3.3h-3.5v4.98c0 1.49.75 2 1.95 2h1.7V21h-3.2Z"/></svg></a>
+    </div>
+  </header>
+
+  <!-- OFFER -->
+  <a class="offer" href="https://semnova.etsy.com" target="_blank" rel="noopener">
+    <span><b>BORN TO… Bundle</b> · Get 20% off when you pick up Born to Shine, Born to Ride and Basketball Born to Win together.</span>
+    <span class="pill">See the offer</span>
+  </a>
+
+  <!-- REELS -->
+  <section id="reels">
+    <div class="head">
+      <h2>Reels & <em>motion</em></h2>
+      <a class="more" href="https://www.instagram.com/semnova.studios/reels/" target="_blank" rel="noopener">More on Instagram →</a>
+    </div>
+    <div class="reels">
+      <div class="reel">
+        <span class="badge">BRAND FILM</span>
+        <video id="introVideo" src="assets/semnova-intro.mp4" poster="assets/intro-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+        <button class="sound" id="soundBtn" aria-label="Turn sound on">
+          <svg viewBox="0 0 24 24" id="soundIcon"><path d="M3 9v6h4l5 5V4L7 9H3Zm13.6 3 2.7-2.7-1.4-1.4-2.7 2.7-2.7-2.7-1.4 1.4 2.7 2.7-2.7 2.7 1.4 1.4 2.7-2.7 2.7 2.7 1.4-1.4-2.7-2.7Z"/></svg>
+        </button>
+        <div class="cap"><b>Welcome to SEMNOVA</b><span>Epic and bold designs</span></div>
+      </div>
+      <a class="reel" href="https://www.etsy.com/listing/4614623215/electricity-skull-png-chrome-skull" target="_blank" rel="noopener">
+        <img class="kb" src="https://i.etsystatic.com/68342995/r/il/94684e/8836199184/il_1080xN.8836199184_fc2x.jpg" alt="Electricity Skull PNG design" loading="lazy">
+        <div class="cap"><b>Electricity Skull</b><span>Shop the design →</span></div>
+      </a>
+      <a class="reel" href="https://www.etsy.com/listing/4614084107/jd-habibi-chrome-graffiti-png-10-colour" target="_blank" rel="noopener">
+        <img class="kb" src="https://i.etsystatic.com/68342995/r/il/fdf40c/8879741275/il_1080xN.8879741275_d3zl.jpg" alt="JD Habibi chrome graffiti PNG in 10 colours" loading="lazy">
+        <div class="cap"><b>JD Habibi · 10 colours</b><span>Shop the design →</span></div>
+      </a>
+      <a class="reel" href="https://www.etsy.com/listing/4621633221/fire-alphabet-png-bundle-chrome-gold" target="_blank" rel="noopener">
+        <img class="kb" src="https://i.etsystatic.com/68342995/r/il/b7b831/8894037888/il_1080xN.8894037888_rjwl.jpg" alt="Fire, chrome and gold alphabet PNG bundle" loading="lazy">
+        <div class="cap"><b>Alphabet Bundle</b><span>Shop the design →</span></div>
+      </a>
+      <a class="reel" href="https://www.etsy.com/listing/4622708085/sunset-mountain-lake-wall-art-printable" target="_blank" rel="noopener">
+        <img class="kb" src="https://i.etsystatic.com/68342995/r/il/076c46/8902941318/il_1080xN.8902941318_ne7u.jpg" alt="Golden Hour Lake sunset wall art" loading="lazy">
+        <div class="cap"><b>Golden Hour Lake</b><span>Shop the print →</span></div>
+      </a>
+      <a class="reel" href="https://www.etsy.com/listing/4621057295/for-i-am-doom-png-hooded-villain-shirt" target="_blank" rel="noopener">
+        <img class="kb" src="https://i.etsystatic.com/68342995/r/il/d9b390/8937021363/il_1080xN.8937021363_bfnk.jpg" alt="For I Am Doom hooded villain PNG" loading="lazy">
+        <div class="cap"><b>For I Am Doom</b><span>Shop the design →</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="shop">
+    <div class="head">
+      <h2>Featured <em>designs</em></h2>
+      <a class="more" href="https://semnova.etsy.com" target="_blank" rel="noopener">See the full shop →</a>
+    </div>
+    <div class="chips" role="group" aria-label="Filter designs">
+      <button class="chip" data-f="all" aria-pressed="true">All</button>
+      <button class="chip" data-f="tee" aria-pressed="false">Tee & merch PNGs</button>
+      <button class="chip" data-f="wall" aria-pressed="false">Wall art</button>
+      <button class="chip" data-f="plan" aria-pressed="false">Planners</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <h2>Made by <em>SEMNOVA Studios</em></h2>
+    <p>We create cinematic, high-impact designs you can wear, print and display. Every file is an instant digital download, sized for print, DTF and sublimation, and packed with care so it's easy to use from the first click.</p>
+    <a class="btn primary" href="https://semnova.etsy.com" target="_blank" rel="noopener">
+      <span class="label">Visit the Etsy shop</span><span class="arrow">→</span>
+    </a>
+  </section>
+</main>
+
+<footer>
+  <div class="fl">
+    <a href="https://semnova.etsy.com" target="_blank" rel="noopener">Etsy</a>
+    <a href="https://www.teepublic.com/user/semnova-studios" target="_blank" rel="noopener">TeePublic</a>
+    <a href="https://www.instagram.com/semnova.studios/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.facebook.com/profile.php?id=1391584774045946" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.pinterest.com/semnovastudios/" target="_blank" rel="noopener">Pinterest</a>
+    <a href="https://x.com/SEMNOVAStudios" target="_blank" rel="noopener">X</a>
+    <a href="https://semnovastudios.tumblr.com" target="_blank" rel="noopener">Tumblr</a>
+  </div>
+  <p>Designs by SEMNOVA Studios, created with the help of AI tools and finished by hand.</p>
+  <p>© <span id="yr">2026</span> SEMNOVA Studios</p>
+</footer>
+
+<script>
+  // Product catalogue: edit this list to add or swap featured designs
+  const products = [
+    {t:"Electricity Skull", d:"Chrome skull with blue lightning, transparent PNG", c:"tee", u:"https://www.etsy.com/listing/4614623215/electricity-skull-png-chrome-skull", i:"https://i.etsystatic.com/68342995/r/il/94684e/8836199184/il_1080xN.8836199184_fc2x.jpg"},
+    {t:"JD Habibi · 10 colours", d:"Chrome graffiti lettering in ten colourways", c:"tee", u:"https://www.etsy.com/listing/4614084107/jd-habibi-chrome-graffiti-png-10-colour", i:"https://i.etsystatic.com/68342995/r/il/fdf40c/8879741275/il_1080xN.8879741275_d3zl.jpg"},
+    {t:"For I Am Doom", d:"Hooded villain design for shirts and merch", c:"tee", u:"https://www.etsy.com/listing/4621057295/for-i-am-doom-png-hooded-villain-shirt", i:"https://i.etsystatic.com/68342995/r/il/d9b390/8937021363/il_1080xN.8937021363_bfnk.jpg"},
+    {t:"Alphabet Bundle", d:"Fire, chrome, gold and electric letters and numbers", c:"tee", u:"https://www.etsy.com/listing/4621633221/fire-alphabet-png-bundle-chrome-gold", i:"https://i.etsystatic.com/68342995/r/il/b7b831/8894037888/il_1080xN.8894037888_rjwl.jpg"},
+    {t:"Born to Ride", d:"Chrome skull motorcycle with fiery lettering", c:"tee", u:"https://www.etsy.com/listing/4604110821/born-to-ride-png-skull-motorcycle", i:"https://i.etsystatic.com/68342995/r/il/69d40b/8798139491/il_1080xN.8798139491_mx5r.jpg"},
+    {t:"Adoken Energy Blast", d:"Blue energy and fire blast bundle", c:"tee", u:"https://www.etsy.com/listing/4607572036/adoken-png-bundle-blue-energy-fire-blast", i:"https://i.etsystatic.com/68342995/r/il/b39a5b/8826662001/il_1080xN.8826662001_2j11.jpg"},
+    {t:"Golden Hour Lake", d:"Sunset mountain lake, printable wall art", c:"wall", u:"https://www.etsy.com/listing/4622708085/sunset-mountain-lake-wall-art-printable", i:"https://i.etsystatic.com/68342995/r/il/076c46/8902941318/il_1080xN.8902941318_ne7u.jpg"},
+    {t:"Born to Ride Wall Art", d:"Cinematic biker print in four ratios", c:"wall", u:"https://www.etsy.com/listing/4604766741/born-to-ride-wall-art-printable-biker", i:"https://i.etsystatic.com/68342995/r/il/672a9f/8803720141/il_1080xN.8803720141_meoj.jpg"},
+    {t:"2027 Digital Planner", d:"Hyperlinked planner for GoodNotes and tablets", c:"plan", u:"https://www.etsy.com/listing/4619987252/2027-digital-planner-hyperlinked", i:"https://i.etsystatic.com/68342995/r/il/6607da/8880510580/il_1080xN.8880510580_1zdb.jpg"}
+  ];
+  const labels = {tee:"Tee & merch PNG", wall:"Wall art", plan:"Planner"};
+  const grid = document.getElementById("grid");
+  grid.innerHTML = products.map(p => `
+    <a class="card" data-c="${p.c}" href="${p.u}" target="_blank" rel="noopener">
+      <div class="img"><img src="${p.i}" alt="${p.t}" loading="lazy"></div>
+      <div class="body"><span class="cat">${labels[p.c]}</span><h3>${p.t}</h3><p>${p.d}</p><span class="go">View on Etsy →</span></div>
+    </a>`).join("");
+
+  document.querySelectorAll(".chip").forEach(ch => ch.addEventListener("click", () => {
+    document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === ch));
+    const f = ch.dataset.f;
+    grid.querySelectorAll(".card").forEach(card => card.hidden = !(f === "all" || card.dataset.c === f));
+  }));
+
+  // Sound toggle for the brand film
+  const v = document.getElementById("introVideo"), b = document.getElementById("soundBtn"), ic = document.getElementById("soundIcon");
+  const on = "M3 9v6h4l5 5V4L7 9H3Zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05A4.48 4.48 0 0 0 16.5 12ZM14 3.23v2.06a7 7 0 0 1 0 13.42v2.06A9 9 0 0 0 14 3.23Z";
+  const off = ic.firstElementChild.getAttribute("d");
+  b.addEventListener("click", () => {
+    v.muted = !v.muted; if (!v.muted) { v.currentTime = 0; v.play(); }
+    ic.firstElementChild.setAttribute("d", v.muted ? off : on);
+    b.setAttribute("aria-label", v.muted ? "Turn sound on" : "Turn sound off");
+  });
+  document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
