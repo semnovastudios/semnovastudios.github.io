@@ -93,13 +93,23 @@
 
   /* OFFER */
   .offer{
-    margin:36px auto 0;max-width:760px;border-radius:var(--radius);padding:18px 22px;
-    display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:space-between;
-    background:linear-gradient(120deg,rgba(217,112,26,.22),rgba(227,181,101,.12));
-    border:1px solid rgba(217,112,26,.45);
+    margin:36px auto 0;border-radius:var(--radius);padding:24px;
+    display:grid;grid-template-columns:1.1fr 1fr;gap:22px;align-items:center;
+    background:linear-gradient(120deg,rgba(217,112,26,.28),rgba(227,181,101,.12));
+    border:1px solid rgba(217,112,26,.5);
   }
-  .offer b{color:var(--gold)}
-  .offer .pill{background:var(--ember);color:var(--cream);font-weight:600;font-size:13px;padding:9px 16px;border-radius:999px;white-space:nowrap}
+  .offer .tag{display:inline-block;background:var(--ember);color:var(--cream);font-weight:600;font-size:12px;letter-spacing:.8px;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+  .offer h2{margin-top:10px;font-size:clamp(26px,4vw,38px)}
+  .offer p{color:var(--parchment);opacity:.85;font-size:14.5px;margin-top:6px;max-width:440px}
+  .offer .pill{display:inline-block;margin-top:14px;background:var(--gold);color:var(--night);font-weight:600;font-size:14px;padding:10px 18px;border-radius:999px}
+  .offer .pill:hover{background:#F0C878}
+  .deals{display:grid;gap:8px}
+  .deals-title{font-size:12px;letter-spacing:.8px;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .deal{display:block;background:rgba(28,20,17,.55);border:1px solid rgba(227,181,101,.22);border-radius:12px;padding:10px 14px;font-size:14px;transition:.15s}
+  .deal:hover{border-color:var(--gold)}
+  .deal b{color:var(--gold);margin-right:6px}
+  .deal small{display:block;color:var(--smoke-2);font-size:12px}
+  @media (max-width:720px){.offer{grid-template-columns:1fr;padding:20px}}
 
   /* SECTIONS */
   section{padding:56px 0 0}
@@ -155,6 +165,11 @@
   .card p{font-size:13px;color:var(--smoke-2)}
   .card .go{margin-top:auto;padding-top:8px;font-size:13.5px;color:var(--gold);font-weight:500}
   .card[hidden]{display:none}
+  .card .img{position:relative}
+  .card .off{position:absolute;top:10px;left:10px;z-index:1;background:var(--ember);color:var(--cream);font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px}
+  .card .ends{font-size:12px;color:var(--gold)}
+  .morebtn{display:block;margin:22px auto 0;font:600 14px Poppins,sans-serif;color:var(--night);background:var(--gold);border:none;border-radius:999px;padding:12px 24px;cursor:pointer}
+  .morebtn[hidden]{display:none}
 
   /* WHAT WE MAKE */
   .make{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
@@ -254,10 +269,22 @@
   </header>
 
   <!-- OFFER -->
-  <a class="offer" href="https://semnova.etsy.com" target="_blank" rel="noopener">
-    <span><b>BORN TO… Bundle</b> · Get 20% off when you pick up Born to Shine, Born to Ride and Basketball Born to Win together.</span>
-    <span class="pill">See the offer</span>
-  </a>
+  <section class="offer" aria-label="Current sale" data-until="2026-12-21">
+    <div class="offer-main">
+      <span class="tag">Holiday Sale</span>
+      <h2>35% off <em>everything</em></h2>
+      <p>Every SEMNOVA design is 35% off on Etsy until 21 December. No code needed, the discount is already applied.</p>
+      <a class="pill" href="https://semnova.etsy.com" target="_blank" rel="noopener">Shop the sale →</a>
+    </div>
+    <div class="deals">
+      <span class="deals-title">Bigger deals</span>
+      <a class="deal" data-until="2026-12-18" href="https://www.etsy.com/listing/4619987252/2027-digital-planner-hyperlinked" target="_blank" rel="noopener"><b>65% off</b> 2027 Digital Planner <small>until 18 Dec</small></a>
+      <a class="deal" data-until="2026-12-10" href="https://www.etsy.com/listing/4621057295/for-i-am-doom-png-hooded-villain-shirt" target="_blank" rel="noopener"><b>50% off</b> For I Am Doom <small>until 10 Dec</small></a>
+      <a class="deal" data-until="2026-12-10" href="https://www.etsy.com/listing/4594478498/10-super-hero-logo-designs-in-10" target="_blank" rel="noopener"><b>50% off</b> Superhero Emblem Bundle <small>until 10 Dec</small></a>
+      <a class="deal" data-until="2026-12-10" href="https://www.etsy.com/listing/4594478671/6-powerful-life-elements-super-life" target="_blank" rel="noopener"><b>50% off</b> Motivational Wall Art Set <small>until 10 Dec</small></a>
+      <a class="deal" href="https://www.etsy.com/listing/4602827119/born-to-shine-png-fiery-sun-typography" target="_blank" rel="noopener"><b>Bundle</b> BORN TO… trio: Shine, Ride &amp; Basketball <small>add all 3 on Etsy</small></a>
+    </div>
+  </section>
 
   <!-- REELS -->
   <section id="reels">
@@ -278,13 +305,13 @@
         <img class="kb" src="https://i.etsystatic.com/68342995/r/il/94684e/8836199184/il_1080xN.8836199184_fc2x.jpg" alt="Electricity Skull PNG design" loading="lazy">
         <div class="cap"><b>Electricity Skull</b><span>Shop the design →</span></div>
       </a>
-      <a class="reel" href="https://www.etsy.com/listing/4614084107/jd-habibi-chrome-graffiti-png-10-colour" target="_blank" rel="noopener">
-        <img class="kb" src="https://i.etsystatic.com/68342995/r/il/fdf40c/8879741275/il_1080xN.8879741275_d3zl.jpg" alt="JD Habibi chrome graffiti PNG in 10 colours" loading="lazy">
-        <div class="cap"><b>JD Habibi · 10 colours</b><span>Shop the design →</span></div>
+      <a class="reel" href="https://www.etsy.com/listing/4621899680/cozy-christmas-printable-bundle" target="_blank" rel="noopener">
+        <img class="kb" src="https://i.etsystatic.com/68342995/r/il/2cbc66/8943997837/il_794xN.8943997837_8zt9.jpg" alt="Cozy Christmas printable bundle" loading="lazy">
+        <div class="cap"><b>Cozy Christmas Bundle</b><span>Shop the printables →</span></div>
       </a>
-      <a class="reel" href="https://www.etsy.com/listing/4621633221/fire-alphabet-png-bundle-chrome-gold" target="_blank" rel="noopener">
-        <img class="kb" src="https://i.etsystatic.com/68342995/r/il/b7b831/8894037888/il_1080xN.8894037888_rjwl.jpg" alt="Fire, chrome and gold alphabet PNG bundle" loading="lazy">
-        <div class="cap"><b>Alphabet Bundle</b><span>Shop the design →</span></div>
+      <a class="reel" href="https://www.etsy.com/listing/4621914415/funny-santa-sticker-png-bundle-christmas" target="_blank" rel="noopener">
+        <img class="kb" src="https://i.etsystatic.com/68342995/r/il/3bf0af/8896413450/il_794xN.8896413450_fzql.jpg" alt="Funny Santa sticker bundle" loading="lazy">
+        <div class="cap"><b>Funny Santa Stickers</b><span>Shop the stickers →</span></div>
       </a>
       <a class="reel" href="https://www.etsy.com/listing/4622708085/sunset-mountain-lake-wall-art-printable" target="_blank" rel="noopener">
         <img class="kb" src="https://i.etsystatic.com/68342995/r/il/076c46/8902941318/il_1080xN.8902941318_ne7u.jpg" alt="Golden Hour Lake sunset wall art" loading="lazy">
@@ -300,16 +327,20 @@
   <!-- PRODUCTS -->
   <section id="shop">
     <div class="head">
-      <h2>Featured <em>designs</em></h2>
+      <h2>All our <em>designs</em></h2>
       <a class="more" href="https://semnova.etsy.com" target="_blank" rel="noopener">See the full shop →</a>
     </div>
     <div class="chips" role="group" aria-label="Filter designs">
-      <button class="chip" data-f="all" aria-pressed="true">All</button>
+      <button class="chip" data-f="all" aria-pressed="true">All (<span id="count">31</span>)</button>
+      <button class="chip" data-f="deal" aria-pressed="false">🔥 50%+ off</button>
+      <button class="chip" data-f="xmas" aria-pressed="false">Christmas & winter</button>
       <button class="chip" data-f="tee" aria-pressed="false">Tee & merch PNGs</button>
+      <button class="chip" data-f="clip" aria-pressed="false">Clipart & stickers</button>
       <button class="chip" data-f="wall" aria-pressed="false">Wall art</button>
-      <button class="chip" data-f="plan" aria-pressed="false">Planners</button>
+      <button class="chip" data-f="plan" aria-pressed="false">Planners & printables</button>
     </div>
     <div class="grid" id="grid"></div>
+    <button class="morebtn" id="moreBtn" hidden>Show all designs</button>
   </section>
 
   <!-- WHAT WE MAKE -->
@@ -348,30 +379,74 @@
 
 <script>
   // Product catalogue: edit this list to add or swap featured designs
+  const L = "https://www.etsy.com/listing/", IMG = "https://i.etsystatic.com/68342995/r/il/";
   const products = [
-    {t:"Electricity Skull", d:"Chrome skull with blue lightning, transparent PNG", c:"tee", u:"https://www.etsy.com/listing/4614623215/electricity-skull-png-chrome-skull", i:"https://i.etsystatic.com/68342995/r/il/94684e/8836199184/il_1080xN.8836199184_fc2x.jpg"},
-    {t:"JD Habibi · 10 colours", d:"Chrome graffiti lettering in ten colourways", c:"tee", u:"https://www.etsy.com/listing/4614084107/jd-habibi-chrome-graffiti-png-10-colour", i:"https://i.etsystatic.com/68342995/r/il/fdf40c/8879741275/il_1080xN.8879741275_d3zl.jpg"},
-    {t:"For I Am Doom", d:"Hooded villain design for shirts and merch", c:"tee", u:"https://www.etsy.com/listing/4621057295/for-i-am-doom-png-hooded-villain-shirt", i:"https://i.etsystatic.com/68342995/r/il/d9b390/8937021363/il_1080xN.8937021363_bfnk.jpg"},
-    {t:"Alphabet Bundle", d:"Fire, chrome, gold and electric letters and numbers", c:"tee", u:"https://www.etsy.com/listing/4621633221/fire-alphabet-png-bundle-chrome-gold", i:"https://i.etsystatic.com/68342995/r/il/b7b831/8894037888/il_1080xN.8894037888_rjwl.jpg"},
-    {t:"Born to Ride", d:"Chrome skull motorcycle with fiery lettering", c:"tee", u:"https://www.etsy.com/listing/4604110821/born-to-ride-png-skull-motorcycle", i:"https://i.etsystatic.com/68342995/r/il/69d40b/8798139491/il_1080xN.8798139491_mx5r.jpg"},
-    {t:"Adoken Energy Blast", d:"Blue energy and fire blast bundle", c:"tee", u:"https://www.etsy.com/listing/4607572036/adoken-png-bundle-blue-energy-fire-blast", i:"https://i.etsystatic.com/68342995/r/il/b39a5b/8826662001/il_1080xN.8826662001_2j11.jpg"},
-    {t:"Golden Hour Lake", d:"Sunset mountain lake, printable wall art", c:"wall", u:"https://www.etsy.com/listing/4622708085/sunset-mountain-lake-wall-art-printable", i:"https://i.etsystatic.com/68342995/r/il/076c46/8902941318/il_1080xN.8902941318_ne7u.jpg"},
-    {t:"Born to Ride Wall Art", d:"Cinematic biker print in four ratios", c:"wall", u:"https://www.etsy.com/listing/4604766741/born-to-ride-wall-art-printable-biker", i:"https://i.etsystatic.com/68342995/r/il/672a9f/8803720141/il_1080xN.8803720141_meoj.jpg"},
-    {t:"2027 Digital Planner", d:"Hyperlinked planner for GoodNotes and tablets", c:"plan", u:"https://www.etsy.com/listing/4619987252/2027-digital-planner-hyperlinked", i:"https://i.etsystatic.com/68342995/r/il/6607da/8880510580/il_1080xN.8880510580_1zdb.jpg"}
+    {t:"Cozy Christmas Printable Bundle", d:"Wall art, gift tags, holiday cards and planner pages in one style", c:"xmas", o:35, e:"2026-12-21", u:L+"4621899680/cozy-christmas-printable-bundle", i:IMG+"2cbc66/8943997837/il_794xN.8943997837_8zt9.jpg"},
+    {t:"Funny Santa Sticker Bundle", d:"Gamer and gym Santa sticker sheet, print then cut", c:"xmas", o:35, e:"2026-12-21", u:L+"4621914415/funny-santa-sticker-png-bundle-christmas", i:IMG+"3bf0af/8896413450/il_794xN.8896413450_fzql.jpg"},
+    {t:"Sarcastic Winter Sticker Bundle", d:"Funny cold-season sticker designs", c:"xmas", o:35, e:"2026-12-21", u:L+"4598172235/funny-winter-sticker-png-bundle", i:IMG+"36c4da/8748406467/il_794xN.8748406467_qrg7.jpg"},
+    {t:"2027 Digital Planner", d:"Hyperlinked planner for GoodNotes and iPad", c:"plan", o:65, e:"2026-12-18", u:L+"4619987252/2027-digital-planner-hyperlinked", i:IMG+"6607da/8880510580/il_794xN.8880510580_1zdb.jpg"},
+    {t:"For I Am Doom", d:"Hooded villain gothic design for shirts and merch", c:"tee", o:50, e:"2026-12-10", u:L+"4621057295/for-i-am-doom-png-hooded-villain-shirt", i:IMG+"d9b390/8937021363/il_794xN.8937021363_bfnk.jpg"},
+    {t:"Superhero Emblem Bundle", d:"10 fantasy hero badge designs, PNG", c:"tee", o:50, e:"2026-12-10", u:L+"4594478498/10-super-hero-logo-designs-in-10", i:IMG+"de73b0/8892155911/il_794xN.8892155911_erwr.jpg"},
+    {t:"Motivational Wall Art Set", d:"6 bold, colourful life element posters", c:"wall", o:50, e:"2026-12-10", u:L+"4594478671/6-powerful-life-elements-super-life", i:IMG+"d0f128/8670613114/il_794xN.8670613114_btiv.jpg"},
+    {t:"Hooded Shadow", d:"Green hood with glowing eyes, dark fantasy PNG", c:"tee", o:35, e:"2026-12-21", u:L+"4621078523/hooded-shadow-png-glowing-eyes-hood", i:IMG+"257a81/8937213081/il_794xN.8937213081_779z.jpg"},
+    {t:"Fire Alphabet Bundle", d:"Fire, chrome, gold and electric letters and numbers", c:"tee", o:35, e:"2026-12-21", u:L+"4621633221/fire-alphabet-png-bundle-chrome-gold", i:IMG+"b7b831/8894037888/il_794xN.8894037888_rjwl.jpg"},
+    {t:"Golden Hour Lake", d:"Sunset mountain lake, printable wall art", c:"wall", o:35, e:"2026-12-21", u:L+"4622708085/sunset-mountain-lake-wall-art-printable", i:IMG+"076c46/8902941318/il_794xN.8902941318_ne7u.jpg"},
+    {t:"Basketball Born to Win", d:"Born to play, built to win sports poster", c:"wall", o:35, e:"2026-12-21", u:L+"4619411476/basketball-wall-art-printable-born-to", i:IMG+"164ac9/8876025458/il_794xN.8876025458_84j2.jpg"},
+    {t:"Get Over Here", d:"Fiery spear and rope lettering, transparent PNG", c:"tee", o:35, e:"2026-12-21", u:L+"4618222404/get-over-here-png-fiery-spear-and-rope", i:IMG+"81793c/8913950705/il_794xN.8913950705_85jk.jpg"},
+    {t:"Electricity Skull", d:"Chrome skull with blue lightning, transparent PNG", c:"tee", o:35, e:"2026-12-21", u:L+"4614623215/electricity-skull-png-chrome-skull", i:IMG+"94684e/8836199184/il_794xN.8836199184_fc2x.jpg"},
+    {t:"JD Habibi · 10 colours", d:"Chrome graffiti lettering in ten colourways", c:"tee", o:35, e:"2026-12-21", u:L+"4614084107/jd-habibi-chrome-graffiti-png-10-colour", i:IMG+"fdf40c/8879741275/il_794xN.8879741275_d3zl.jpg"},
+    {t:"Habibi Chrome Graffiti", d:"Habibi shirt design, transparent PNG", c:"tee", o:35, e:"2026-12-21", u:L+"4614402931/jd-habibi-chrome-graffiti-png-habibi", i:IMG+"aea4ca/8882254459/il_794xN.8882254459_5a79.jpg"},
+    {t:"They Are Coming", d:"Chrome skull with lightning and fire", c:"tee", o:35, e:"2026-12-21", u:L+"4613693821/they-are-coming-png-chrome-skull", i:IMG+"629043/8828598678/il_794xN.8828598678_9dme.jpg"},
+    {t:"Adoken Energy Blast", d:"Blue energy and fire blast bundle", c:"tee", o:35, e:"2026-12-21", u:L+"4607572036/adoken-png-bundle-blue-energy-fire-blast", i:IMG+"b39a5b/8826662001/il_794xN.8826662001_2j11.jpg"},
+    {t:"Born to Ride", d:"Chrome skull motorcycle with fiery lettering", c:"tee", o:35, e:"2026-12-21", u:L+"4604110821/born-to-ride-png-skull-motorcycle", i:IMG+"69d40b/8798139491/il_794xN.8798139491_mx5r.jpg"},
+    {t:"Born to Shine", d:"Fiery sun typography, PNG and printable PDF", c:"tee", o:35, e:"2026-12-21", u:L+"4602827119/born-to-shine-png-fiery-sun-typography", i:IMG+"184f14/8739203790/il_794xN.8739203790_khjp.jpg"},
+    {t:"Flaming Skull", d:"Red-eyed fire skull, transparent PNG", c:"tee", o:35, e:"2026-12-21", u:L+"4595059743/smoke-fiery-skull-glow-eyes-png", i:IMG+"80d459/8675118236/il_794xN.8675118236_l9ze.jpg"},
+    {t:"Born to Ride Wall Art", d:"Cinematic biker print in four ratios", c:"wall", o:35, e:"2026-12-21", u:L+"4604766741/born-to-ride-wall-art-printable-biker", i:IMG+"672a9f/8803720141/il_794xN.8803720141_meoj.jpg"},
+    {t:"90s Nostalgia Poster Bundle", d:"25 retro wall art printables", c:"wall", o:35, e:"2026-12-21", u:L+"4594924626/25-nostalgic-90s-items-wall-posters-door", i:IMG+"2259f2/8721736295/il_794xN.8721736295_ovxp.jpg"},
+    {t:"Vintage Skeleton Poster", d:"Spooky carnival wall art printable", c:"wall", o:35, e:"2026-12-21", u:L+"4597283043/laughing-skeleton-halloween-carnival", i:IMG+"c5ddea/8740917901/il_794xN.8740917901_o2i2.jpg"},
+    {t:"Halloween Monster Posters", d:"Set of 3 spooky wall and door decorations", c:"wall", o:35, e:"2026-12-21", u:L+"4594770571/three-new-creation-spooky-monsters-for", i:IMG+"aec099/8672900304/il_794xN.8672900304_t0dq.jpg"},
+    {t:"Waiting for Halloween", d:"Funny office poster printable", c:"wall", o:35, e:"2026-12-21", u:L+"4594495695/waiting-for-halloween-workday", i:IMG+"e2a83a/8670732114/il_794xN.8670732114_g7k3.jpg"},
+    {t:"Funny Halloween Clipart", d:"15 spooky PNG designs", c:"clip", o:35, e:"2026-12-21", u:L+"4597275792/funny-spooky-halloween-clipart-bundle-15", i:IMG+"0e48e1/8738104657/il_794xN.8738104657_4q9o.jpg"},
+    {t:"Scary Boo Ghosts", d:"4 ghost designs, PNG and print-ready PDF", c:"clip", o:35, e:"2026-12-21", u:L+"4595914455/zipper-scary-boo-4-ghost-designs-png", i:IMG+"76caa4/8729429371/il_794xN.8729429371_78zm.jpg"},
+    {t:"Creepy Pumpkin", d:"Evil staring pumpkin clipart, PNG", c:"clip", o:35, e:"2026-12-21", u:L+"4595163074/evil-spooky-pumpkin-real-eyes-stare-png", i:IMG+"53d14a/8723657331/il_794xN.8723657331_i92f.jpg"},
+    {t:"Ghost on Broom", d:"Realistic Halloween ghost clipart, PNG", c:"clip", o:35, e:"2026-12-21", u:L+"4595036100/happy-ghost-with-broom-ultra-realistic", i:IMG+"66dde8/8722585013/il_794xN.8722585013_35cn.jpg"},
+    {t:"Little Hero Kids Set", d:"Exercise chart, reward certificate and stickers", c:"plan", o:35, e:"2026-12-21", u:L+"4596587824/little-hero-kids-achievement-set-reward", i:IMG+"366193/8686931966/il_794xN.8686931966_oiwm.jpg"},
+    {t:"Animal Alphabet Coloring Pages", d:"Preschool ABC printable PDF", c:"plan", o:35, e:"2026-12-21", u:L+"4594378515/happy-animals-alphabets-coloring-book", i:IMG+"e3152d/8717563001/il_794xN.8717563001_rhud.jpg"}
   ];
-  const labels = {tee:"Tee & merch PNG", wall:"Wall art", plan:"Planner"};
+  const labels = {xmas:"Christmas & winter", tee:"Tee & merch PNG", clip:"Clipart & stickers", wall:"Wall art", plan:"Planner & printable"};
+  const today = new Date().toISOString().slice(0,10);
+  const onSale = p => p.o && today <= p.e;
+  const fmt = d => new Date(d+"T12:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"short"});
   const grid = document.getElementById("grid");
-  grid.innerHTML = products.map(p => `
-    <a class="card" data-c="${p.c}" href="${p.u}" target="_blank" rel="noopener">
-      <div class="img"><img src="${p.i}" alt="${p.t}" loading="lazy"></div>
-      <div class="body"><span class="cat">${labels[p.c]}</span><h3>${p.t}</h3><p>${p.d}</p><span class="go">View on Etsy →</span></div>
+  grid.innerHTML = products.map((p,n) => `
+    <a class="card" data-c="${p.c}" data-deal="${onSale(p)&&p.o>=50}" data-n="${n}" href="${p.u}" target="_blank" rel="noopener">
+      <div class="img">${onSale(p)?`<span class="off">${p.o}% off</span>`:""}<img src="${p.i}" alt="${p.t}" loading="lazy"></div>
+      <div class="body"><span class="cat">${labels[p.c]}</span><h3>${p.t}</h3><p>${p.d}</p>${onSale(p)?`<span class="ends">Sale ends ${fmt(p.e)}</span>`:""}<span class="go">View on Etsy →</span></div>
     </a>`).join("");
+  document.getElementById("count").textContent = products.length;
 
+  const LIMIT = 12; let expanded = false, filter = "all";
+  const moreBtn = document.getElementById("moreBtn");
+  function apply(){
+    let shown = 0;
+    grid.querySelectorAll(".card").forEach(card => {
+      const match = filter === "all" || (filter === "deal" ? card.dataset.deal === "true" : card.dataset.c === filter);
+      const hide = !match || (filter === "all" && !expanded && +card.dataset.n >= LIMIT);
+      card.hidden = hide; if (!hide) shown++;
+    });
+    moreBtn.hidden = !(filter === "all" && !expanded && products.length > LIMIT);
+  }
+  moreBtn.addEventListener("click", () => { expanded = true; apply(); });
   document.querySelectorAll(".chip").forEach(ch => ch.addEventListener("click", () => {
     document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === ch));
-    const f = ch.dataset.f;
-    grid.querySelectorAll(".card").forEach(card => card.hidden = !(f === "all" || card.dataset.c === f));
+    filter = ch.dataset.f; apply();
   }));
+  if (!products.some(p => onSale(p) && p.o >= 50)) document.querySelector('.chip[data-f="deal"]').remove();
+  apply();
+
+  // Sale banner and deal links switch themselves off after their end dates
+  document.querySelectorAll("[data-until]").forEach(el => { if (today > el.dataset.until) el.remove(); });
+  if (!document.querySelector(".offer .deal") && today > "2026-12-21") { const o = document.querySelector(".offer"); if (o) o.remove(); }
 
   // Sound toggle for the brand film
   const v = document.getElementById("introVideo"), b = document.getElementById("soundBtn"), ic = document.getElementById("soundIcon");
